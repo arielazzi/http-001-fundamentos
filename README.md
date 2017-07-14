@@ -102,3 +102,86 @@ O que você aprendeu nesse capítulo?
  - As chaves públicas estão no certificado, a chave privada fica apenas no servidor
  - O que é uma autoridade certificadora
  - O navegador utiliza a chave pública para criptografar os dados
+ 
+ 
+ 
+ # Aula 3
+ 
+ ## Endereço
+
+WWW.ALURA.COM.BR
+
+
+ - WWW - world wide web
+ - ALURA - dominio
+ - BR - Brasil (org - organizacional, edu - educacional, ...)
+ - COM - Comercial (gov - governamental, ...)
+
+-----
+
+### Subdomínios
+
+Subdomínios apontam para páginas diferentes dentro do mesmo domínio 
+
+ - mail.google.com
+ - drive.google.com
+
+-----
+
+### Endereços IP's
+
+```
+nslookup google.com
+...
+Name:    google.com
+Address: 216.58.202.238
+```
+
+### DNS(Domain Name System)
+
+Esse serviço age como um grande banco de dados de domínios. Portanto quando fazemos uma requisição para alura.com.br o DNS age transformando para um IP e a requisição prossegue.
+
+https://developers.google.com/speed/public-dns/
+
+-----
+
+### Portas
+
+http://www.alura.com.br:80
+
+ - :80 - padrão do HTTP
+ - :443 - padrão do HTTPs
+
+Vários protocolos definem a sua porta padrão como por exemplo o FTP que usa 21 ou SSH que usa 22.
+-----
+
+### Recursos
+
+https://cursos.alura.com.br/dashboard
+
+
+ - O /dashboard é um recurso (resource)
+
+-----
+### Finalmente, a URL
+
+
+![URL completa](https://s3.amazonaws.com/caelum-online-public/http/http-url.png)
+
+-----
+### URI ou URL
+
+Uma URL é uma URI, mas nem todas as URI's são URL's! Existem URI's que identificam um recurso sem definir o endereço, nem o protocolo. Em outras palavras, uma URL representa uma identificação de um recurso (URI*) através do endereço, mas nem todas as identificações são URL's**.
+
+![URL/URI](https://s3.amazonaws.com/caelum-online-public/http/http-uri-urn-url.png)
+-----
+
+O que aprendemos nesse capítulo?
+ - URL são os endereços da Web
+ 
+ - Uma URL começa com o protocolo (por exemplo https://) seguido pelo domínio (www.alura.com.br)
+
+ - Depois do domínio pode vir a porta, se não for definida é utilizada a porta padrão desse protocolo
+ 
+ - Após o domínio:porta, é especificado o caminho para um recurso (/course/introducao-html-css)
+Um recurso é algo concreto na aplicação que queremos acessar

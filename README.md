@@ -185,3 +185,49 @@ O que aprendemos nesse capítulo?
  
  - Após o domínio:porta, é especificado o caminho para um recurso (/course/introducao-html-css)
 Um recurso é algo concreto na aplicação que queremos acessar
+
+
+
+---------
+
+# Aula 4
+
+é importante saber que a comunicação sempre começa com o cliente: é ele quem pede as informações. O servidor responde apenas o que foi requisitado e nunca inicia a comunicação!
+
+-----
+
+requisição enviada pelo navegador para o servidor é chamada de HTTP REQUEST
+
+ No mundo HTTP essa resposta é chamada de HTTP RESPONSE
+
+-----
+
+
+A comunicação segue sempre esse modelo: o cliente envia uma requisição e o servidor responde. Requisição e Resposta ou em inglês: Request-Response
+
+Cada requisição ser independente é chamada de stateless
+
+----- 
+Resumindo teremos:
+
+ - O HTTP usa sessões para salvar informações do usuário
+ - Sessões só são possíveis por uso de Cookies
+ - Cookies são pequenos arquivos que guardam informações no navegador
+ - O HTTP é stateless, não mantem estado.
+
+-----
+
+Uma sessão HTTP nada mais é que um tempo que o cliente permanece ativo no sistema! Isso é parecido com uma sessão no cinema. Uma sessão, nesse contexto, é o tempo que o cliente usa a sala no cinema para assistir a um filme. Quando você sai da sala, termina a sessão. Ou seja, quando você se desloga, a Alura termina a sua sessão.
+
+-----
+
+Quando falamos de Cookies na verdade queremos dizer Cookies HTTP ou Cookie web. Um cookie é um pequeno arquivo de texto, normalmente criado pela aplicação web, para guardar algumas informações sobre usuário no navegador.
+
+------
+
+O que você aprendeu nesse capítulo?
+ - O protocolo HTTP segue o modelo Requisição-Resposta
+ - Sempre o cliente inicia a comunicação
+ - Uma requisição precisa ter todas as informações para o servidor gerar a resposta
+ - HTTP é stateless, não mantém informações entre requisições
+ - As plataformas de desenvolvimento usam sessões para guardar informações entre requisições

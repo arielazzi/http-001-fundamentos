@@ -231,3 +231,35 @@ O que você aprendeu nesse capítulo?
  - Uma requisição precisa ter todas as informações para o servidor gerar a resposta
  - HTTP é stateless, não mantém informações entre requisições
  - As plataformas de desenvolvimento usam sessões para guardar informações entre requisições
+ 
+ 
+ 
+ # Aula 5
+ ## Depurando a requisição HTTP
+
+-----
+
+### Status code mais comuns
+
+ - 200 - OK
+ - 301 - moved permanentely
+ - 404 - not found
+ - 403 - forbidden (não permitido)
+ - 500 - internal server error
+ - 302 - Moved Temporarily
+
+
+https://www.w3schools.com/tags/ref_httpmessages.asp
+
+-------
+
+### Familias Status code
+
+ - 2xx - Successful responses
+ - 3xx - Redirection messages
+ - 4xx - client error responses
+ - 5xx - server error responses
+
+-------
+
+https://httpstatusdogs.com/

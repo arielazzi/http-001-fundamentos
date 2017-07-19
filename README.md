@@ -263,3 +263,74 @@ https://www.w3schools.com/tags/ref_httpmessages.asp
 -------
 
 https://httpstatusdogs.com/
+
+
+
+## Parâmetros da requisição
+
+ - Query Params - Nome que se da para os parametros
+
+O HTTP permite enviar mais de um parâmetro, basta concatenar o próximo parâmetro através do caractere "&"
+-------
+
+### método HTTP GET
+
+Uma característica da requisição GET é enviar os parâmetros pela URL! Isso é útil quando queremos deixar os parâmetros visíveis. Assim podemos facilmente guardar a URL com os parâmetros para repetir a requisição algum momento depois.
+
+-------
+
+### método HTTP POST
+
+Usando o POST, o navegador envia os dados do formulário no corpo da requisição e não na URL!
+
+ao enviar uma requisição POST para o servidor, o nossa intenção é criar algo novo.
+
+-----
+
+Os métodos como GET e POST definem uma intenção mas o que realmente será executado depende do servidor.
+
+-----
+
+Quando enviamos parâmetros na URL, devemos iniciar pelo ?, o nome do parâmetro e um =, para separar o nome do parâmetro do seu valor:
+
+```
+?nome_do_parametro=seu_valor
+```
+
+Quando usamos mais do que, um parâmetro devemos usar & para separá-los:
+
+```
+?nome_do_parametro=seu_valor&nome_do_outro_param=valor
+```
+
+
+ - GET é normalmente usado para pesquisas
+
+----------
+
+Se o GET foi criado para receber dados, e o POST para adicionar algo no servidor, será que não existe algo para apagar e atualizar?
+
+A resposta é sim, e os métodos se chamam DELETE e PUT.
+ 
+ - GET - Receber dados(params na URL)
+
+ - POST - Submeter dados (params no corpo da requisição)
+
+ - DELETE - Remover um recurso
+
+ - PUT - Atualizar um recurso 
+
+------
+
+### Web Service
+
+O importante é que sempre usamos o protocolo HTTP. A grande diferença de um Web Service é que os dados não vem no formato HTML, e sim em algum formato independente da visualização, como XML ou JSON.
+
+
+exemplo: http://viacep.com.br/ws/20040030/json
+
+------
+
+
+
+

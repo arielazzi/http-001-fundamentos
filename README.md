@@ -265,12 +265,14 @@ https://www.w3schools.com/tags/ref_httpmessages.asp
 https://httpstatusdogs.com/
 
 
+# Aula 6
 
 ## Parâmetros da requisição
 
  - Query Params - Nome que se da para os parametros
 
 O HTTP permite enviar mais de um parâmetro, basta concatenar o próximo parâmetro através do caractere "&"
+
 -------
 
 ### método HTTP GET

@@ -336,3 +336,94 @@ exemplo: http://viacep.com.br/ws/20040030/json
 
 
 
+# Aula 7
+
+## REST - REpresentational State Trasfer(REST)
+
+
+
+Recurso(URI) / Operação(GET/POST/PUT/DELETE) / Representação(JSON/XML/HTML)
+
+```
+Listagem de todos os restaurantes --> GET - /restaurante
+
+Adicionar um  restaurante --> POST - /restaurante
+```
+
+Perceba que no exemplo fictício as duas primeiras URIs são idênticas e a funcionalidade muda completamente a partir do método HTTP usado:
+
+```
+GET -> Listagem
+POST -> Criação
+```
+
+A atualização poderia ter um outro endpoint como por exemplo:
+
+```
+PUT/PATCH - /restaurante/1
+```
+
+O número 1 ao final da URI indica um identificador a um restaurante específico.
+
+A remoção de um restaurante poderia seguir o mesmo modelo:
+
+```
+DELETE - /restaurante/1
+```
+
+Para a busca do cardápio de um restaurante específico o endpoint gerado poderia seguir o modelo:
+
+```
+GET - /restaurante/1/cardapio
+```
+
+###O padrão REST
+
+Logo podemos perceber que o padrão usado pela equipe do webservice define que uma requisição web tem três tipos de componentes importantes: recursos(URI) operações(GET,POST,PUT,DELETE/...) e representação de dados(XML,JSON, ...).
+
+Esses três componentes em conjuntos seguindo algumas práticas são a base para o modelo arquitetural REST(Representational State Transfer) ou em português Transferência de Estado Representacional.
+
+
+----------
+
+ - GET - recupera informações sobre o recurso identificado pela URI. Ex: listar restaurante, visualizar o restaurante 1. Uma requisição GET não deve modificar nenhum recurso do seu sistema, ou seja, não deve ter nenhum efeito colateral, você apenas recupera informações do sistema.
+
+ - POST - adiciona informações usando o recurso da URI passada. Ex: adicionar um restaurante. Pode adicionar informações a um recurso ou criar um novo recurso.
+
+ - PUT - adiciona (ou modifica) um recurso na URI passada. Ex: atualizar um restaurante.
+DELETE - remove o recurso representado pela URI passada. Ex: remover um restaurante.
+
+-------------
+Nossas URIs devem representar recursos, as operações no recurso devem ser indicadas pelos métodos HTTP e podemos falar qual é o formato em que conversamos com o servidor com o Content-Type e Accept que são cabeçalhos do HTTP.
+---------
+
+###Transcrição
+REST é um padrão arquitetural para comunicações entre aplicações
+Ele aproveita a estrutura do HTTP
+Recursos são definidos via URI
+Operações com métodos HTTP(GET/POST/PUT/DELETE)
+Cabeçalhos(Accept/Content-Type) são usados para especificar as representações(JSON,XML,...)
+
+---------
+
+Em alguns cabeçalhos do HTTP devemos especificar algum formato. Os formatos são chamados na documentação de MIME types. E na definição do cabeçalho usamos a seguinte estrutura: tipo/subtipo. São tipos conhecidos:
+```
+text, image, application, audio e video
+```
+E alguns subtipos:
+```
+text -> text/plain, text/html, text/css, text/javascript
+```
+```
+image -> image/gif, image/png, image/jpeg
+```
+```
+audio -> audio/midi, audio/mpeg, audio/webm, audio/ogg, audio/wav
+```
+```
+video -> video/mp4
+```
+```
+application -> application/xml,  application/pdf
+```
+Para conhecer outros formatos aceitos você pode acessar aqui: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types

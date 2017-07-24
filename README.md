@@ -237,7 +237,6 @@ O que você aprendeu nesse capítulo?
  # Aula 5
  ## Depurando a requisição HTTP
 
------
 
 ### Status code mais comuns
 

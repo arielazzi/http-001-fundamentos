@@ -426,3 +426,61 @@ video -> video/mp4
 application -> application/xml,  application/pdf
 ```
 Para conhecer outros formatos aceitos você pode acessar aqui: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+
+
+
+# Aula 8
+
+##  HTTP2 - Dados binários, GZIP ativo e TLS
+
+Documentação: https://http2.github.io/
+
+ - GZIP - comprimir os dados das respostas.
+
+ - binários - comprimir os dados
+
+ - HPACK - comprimir os Headers
+
+ - TLS - Criptografia
+
+*com o HTTP/2 o uso de HTTPS acaba sendo obrigatório, e esta é uma das grandes vantagens do uso desta nova atualização do protocolo.
+
+-------
+
+## HTTP2 - Cabeçalhos Stateful
+
+A partir do HTTP2, não precisamos mais repetir os Headers, os cabeçalhos que já enviamos em uma requisição anterior.
+Quando temos cabeçalhos diferentes, ele apenas envia o que que há de diferente.
+
+Quando estamos utilizando Headers Stateful, apenas colocamos nas requisições os cabeçalhos se alteraram entre uma requisição e outra, trazendo uma baita economia de dados, visto que toda requisição HTTP possuí um cabeçalho e que muitas vezes no HTTP/1.1 cabeçalhos repetidos eram trafegados em todas as requisições.
+
+
+-------
+
+
+## HTTP2 - Server Push
+
+o server envia dados para o cliente sem nem mesmo ser pedido, pois ele sabe que será necessario para a execução, sendo essa forma muito mais otimizada de tráfego de dados na comunicação
+
+
+O servidor pode empurrar para o clientes certos recursos antes mesmo de serem solicitados, pois ele consegue analisar o HTML e ver o que mais é preciso para carregar a página fazendo com que não seja necessário gastar tempo pedindo todos os outros recursos.
+
+-------
+
+## HTTP2 - Multiplexação
+
+TCP - Transmission Control Protocol(Protocolo de controle de transmissão - é um protocolo de transporte)
+
+
+O Keep-Alive determina quanto tempo, por exemplo, a nossa conexão pode ficar ativa. Ou seja, não fecha essa conexão TCP. Então, com a mesma conexão TCP, conseguimos realizar várias requisições.
+
+
+### Keep-Alive no HTTP2
+
+O Keep-Alive continua existindo no HTTP2, só que ele trouxe uma novidade. Por exemplo, se temos uma conexão TCP aberta e realizamos uma requisição, poderíamos já dar prosseguimento às próximas requisições, isso em paralelo, sem de fato ficar esperando o resultado dela, de maneira assíncrona, e vamos recebendo essas respostas à medida em que o servidor for conseguindo processar.
+
+Então, essas requisições e respostas vão chegando a todo tempo. É totalmente paralelo. A mesma coisa acontece com o servidor, não precisamos esperar uma resposta para enviar outra. Se já está pronta para ser enviada, ele já envia diretamente.
+
+-------
+
+

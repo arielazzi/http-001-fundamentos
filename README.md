@@ -481,6 +481,5 @@ O Keep-Alive continua existindo no HTTP2, só que ele trouxe uma novidade. Por e
 
 Então, essas requisições e respostas vão chegando a todo tempo. É totalmente paralelo. A mesma coisa acontece com o servidor, não precisamos esperar uma resposta para enviar outra. Se já está pronta para ser enviada, ele já envia diretamente.
 
--------
 
 
